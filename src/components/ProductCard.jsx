@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import ProductRate from './ProductRate'
+import AddToCart from './AddToCart'
 
 function ProductCard({ product }) {
   return (
@@ -26,10 +27,10 @@ function ProductCard({ product }) {
             <p>
                 ${product.price}
             </p>
-            <button>
-                Add to Cart
-            </button>
+
+            <AddToCart showQty={false} product={product} increasePerClick={true} redirect={false}/>
         </div>
+
     </div>
   )
 }
